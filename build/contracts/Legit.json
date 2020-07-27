@@ -1282,12 +1282,12 @@
     "553891": {
       "events": {},
       "links": {},
-      "address": "0x21B2102aa2d40353ab3682aEDA951765C95F0200",
-      "transactionHash": "0xf11837a71dfaec9fae7bd1838c7c2748ab683d344d06f66c1b7a796ff76b5ca1"
+      "address": "0xa6B71F54456D1Db9921774c1226E6B34861E9e99",
+      "transactionHash": "0xf57a55ffdc002da26d3c6bdb29a96e67992519690010629a96ca662b8354f0c5"
     }
   },
   "schemaVersion": "3.2.2",
-  "updatedAt": "2020-07-22T15:31:17.793Z",
+  "updatedAt": "2020-07-23T20:39:11.750Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

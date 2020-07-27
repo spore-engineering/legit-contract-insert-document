@@ -3413,12 +3413,12 @@
     "553891": {
       "events": {},
       "links": {},
-      "address": "0x58d49f9D5D9e97f20e5437dF93cF15C636C59336",
-      "transactionHash": "0xa3215f7e132be4b0d5efecc8dd114439185f8ab8542df903bdb8cd4f21cb6ddd"
+      "address": "0x3b3a6f1B780f030048306FE252Ff42aFec4c0DA9",
+      "transactionHash": "0xd92fabf1de18aaec72155ce8a6e961dedf281e3fef643b2d46ca0c73f7383448"
     }
   },
   "schemaVersion": "3.2.2",
-  "updatedAt": "2020-07-22T15:32:17.361Z",
+  "updatedAt": "2020-07-23T20:40:11.455Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

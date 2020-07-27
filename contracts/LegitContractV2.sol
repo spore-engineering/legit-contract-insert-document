@@ -16,6 +16,10 @@ contract LegitContractV2 {
 
     mapping(string => Certificacion[]) private certificaciones;
 
+    mapping(string => Certificacion[]) private certificaciones_clientes;
+
+    mapping(string => string) private certificaciones_documentos;
+
     string[] private documentos;
     address private admin;
 
@@ -48,6 +52,7 @@ contract LegitContractV2 {
 
         for (uint i = 0; i < arreglo_hash_doc.length; i++) {
             documentos.push(arreglo_hash_doc[i]);
+            certificaciones_documentos[arreglo_hash_doc[i]] = _id_cert;
         }
 
         Certificacion memory _nueva_cert = Certificacion({
@@ -60,6 +65,7 @@ contract LegitContractV2 {
             documentos_nombre: arreglo_nombre_doc
         });
 
+        certificaciones_clientes[_id_cert].push(_nueva_cert);
         certificaciones[_user_email].push(_nueva_cert);
     }
 
@@ -73,6 +79,15 @@ contract LegitContractV2 {
 
         return false;
     }
+
+    function trae(string memory _document_hash) public view returns (Certificacion[] memory) {
+
+        if(keccak256(abi.encodePacked(certificaciones_documentos[_document_hash])).length > 0) {
+            return certificaciones_clientes[certificaciones_documentos[_document_hash]];
+        }
+    }
+
+
 
     function busca(string memory _user_email) public view returns (Certificacion[] memory) {
         return certificaciones[_user_email];
